@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import Home from './components/Home';
+import Users from './components/Users';
+import Produtos from './components/Produtos';
+import Login from './components/Login';
+
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'; 
+import React, { useState, useEffect } from 'react';
+import ProtectedRoute from './components/ProtectedRoute';
+
+
+
+function App () {
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+const handleLogin = () => { 
+
+  setIsAuthenticated(true); 
+
+}; 
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+
+<Router> 
+
+    <Routes> 
+
+      <Route path="/" element={<Login onLogin={handleLogin} />} /> 
+      <Route path="/home"  element={isAuthenticated ? <Home /> : <Navigate to="/" />}/> 
+      <Route path="/usuarios"   element={<Users/>} />
+      <Route path="/produtos"   element={<Produtos/>} />
+      
+
+
+    </Routes> 
+
+</Router> 
+
     </div>
   );
 }

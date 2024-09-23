@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.login {
+  background-image: url("./components/pousada\ bom\ descanso.jpg");
+  height: 105vh;
+  width: 100%;
+  max-width: 8000px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+
+h1 {
+  font-style: italic;
+  font-size: 320%;
+  font-family:'Times New Roman', Times, serif;
+
+}
+
+form {
+  width:100%;
+  box-shadow: 5vh 5vh 100px rgba(238, 54, 54, 0.8);
+  background-color: rgba(245, 245, 220, 0.636);
+  opacity: 99% ;
+}
+
+.form-control {
+  box-shadow: 0 0 10px rgba(216, 42, 19, 0.862);
+}
+
+#sidebar {
+  width: 70px;
+  min-width: 700px;
+  z-index: 1000;
+  transition: all .25s ease-in-out;
+  background-color: #6597cb;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+.home {
+  background-image: url("./components/img\ fundo.jpg");
+  height: 77vh;
+  width: 100%;
+  max-width: 8000px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+
+.card .card-body{
+  box-shadow: 0 0 10px rgb(113, 195, 233);
+  border-width: .5vh;
+ text-align: center;
+ 
+
+ 
+}
+
+.bg-image{
+  box-shadow: 0 0 10px rgb(113, 195, 233);
+  border-radius: 10px;
+
 }
